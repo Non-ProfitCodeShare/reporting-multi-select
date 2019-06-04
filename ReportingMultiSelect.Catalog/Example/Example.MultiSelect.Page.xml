@@ -1,0 +1,35 @@
+﻿<PageDefinitionSpec 
+    xmlns="bb_appfx_pagedefinition" 
+    xmlns:c="bb_appfx_commontypes"
+    ID="35fed0fd-016f-4fcb-82e4-114c94227c72"
+    Name="Example Multi-select"
+    Description="A page for displaying information about example records"
+    Author="MSKCC"
+    >
+
+	<!-- Note:  A page can optionally have a view form associated with it as the "Expression form".  While implemented as a view data form,
+	this form has no UI in this context, and is simply used as a way of loading additional information associated with the page.  The fields
+	returned by the expression form can be used as expressions in various properties throughout the page.  To specify an expression form for this
+	page, add the following attribute:		ExpressionDataFormID="<some guid>"-->
+
+	<!-- define how the page header should appear -->
+	<PageHeader Caption="Example Multi-select" ImageKey="Example Multi-select" />
+
+	<!-- define the tabs for the page - note that if only one tab is present, then that tab's sections are promoted to the page level (ie., the tab
+	itself isn't shown -->
+	<Tabs>
+		<Tab ID="b229391f-db48-419b-8d87-7ee7b4e0adf8" Caption="Tab caption">
+
+			<!-- define the sections for this tab -->
+			<Sections>
+				<Section ID="894d3684-9974-4c55-9cca-d17a657e6992" Caption="Example multi-select">
+					<DataList ID="a3652731-baaa-496a-89f9-f0efe68cdba6" AutoLoadList="false" AutoDisplayFilters="true">
+						<RenderStyle>
+							<StandardView/>
+						</RenderStyle>
+					</DataList>					
+				</Section>
+			</Sections>
+		</Tab>
+	</Tabs>	
+</PageDefinitionSpec>

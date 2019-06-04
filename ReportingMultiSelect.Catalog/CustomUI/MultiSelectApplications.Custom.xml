@@ -1,0 +1,34 @@
+﻿<CustomUIModelMetadata 
+    xmlns="bb_appfx_customuimodelmetadata"
+    xmlns:c="bb_appfx_commontypes"
+    ID="4c2752fa-5968-44a8-977c-155d93e19e64"
+    Name="Multi Select Applications"
+    Description="Multi-select applications form"
+    Author="MSKCC"
+    FormHeader="Select applications"
+    >
+
+	<FormMetaData xmlns="bb_appfx_commontypes">
+		<FormFields>
+			<FormField FieldID="DONATION" Caption="Donation" DataType="Boolean" />
+			<FormField FieldID="EVENTREGISTRATION" Caption="Event registration" DataType="Boolean" />
+			<FormField FieldID="MATCHINGGIFT" Caption="Matching gift" DataType="Boolean" />
+      <FormField FieldID="PLANNEDGIFT" Caption="Planned gift" DataType="Boolean" />
+      <FormField FieldID="PLEDGE" Caption="Pledge" DataType="Boolean" />
+      <FormField FieldID="RECURRINGGIFT" Caption="Recurring gift" DataType="Boolean" />
+      <FormField FieldID="OTHER" Caption="Other" DataType="Boolean" />
+      <FormField FieldID="APPLICATIONSDELIMITED" DataType="String" />
+		</FormFields>
+        <WebUIComponent>
+            <UIModel AssemblyName="ReportingMultiSelect.UIModel.dll" ClassName="ReportingMultiSelect.UIModel.MultiSelectApplicationsUIModel" />
+            <WebUI>
+                <ExternalResource Url="browser/htmlforms/custom/reportingmultiselect/MultiSelectApplications.html" />
+            </WebUI>
+        </WebUIComponent>
+    <UIActions>
+      <UIAction ActionID="SELECTALL" Caption="Select all" />
+      <UIAction ActionID="UNSELECT" Caption="Unselect all" />
+    </UIActions>
+	</FormMetaData>
+
+</CustomUIModelMetadata>

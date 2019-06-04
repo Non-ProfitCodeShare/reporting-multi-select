@@ -1,0 +1,10 @@
+﻿<UIModelWizardMetadata>
+  <SpecFileName>MultiSelectApplications.Custom.xml</SpecFileName>
+  <Namespace></Namespace>
+  <ClassName>MultiSelectApplicationsUIModel</ClassName>
+  <HtmlInfo GenerateHtml="true">
+    <HtmlFile>MultiSelectApplications.html</HtmlFile>
+    <HtmlFolder>htmlforms\custom\reportingmultiselect\</HtmlFolder>
+  </HtmlInfo>
+  <GenerateFromDatabase>false</GenerateFromDatabase>
+</UIModelWizardMetadata>

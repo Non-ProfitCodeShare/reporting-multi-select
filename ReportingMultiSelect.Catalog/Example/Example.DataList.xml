@@ -1,0 +1,96 @@
+﻿<DataListSpec 
+    xmlns="bb_appfx_datalist"
+    xmlns:c="bb_appfx_commontypes"
+    ID="a3652731-baaa-496a-89f9-f0efe68cdba6"
+    Name="Example Data List"
+    Description="A data list showing example records."
+    Author="MSKCC"
+    c:SecurityUIFolder="Example"
+    >
+
+	<!-- define the SP that returns the data for the datalist -->
+	<SPDataList SPName="USR_USP_DATALIST_EXAMPLE">
+		<c:CreateProcedureSQL>
+			<![CDATA[
+create procedure dbo.USR_USP_DATALIST_EXAMPLE
+(
+	@APPLICATIONS nvarchar(400) = null
+  ,@TRANSACTIONTYPES nvarchar(400) = null
+    ,@applicationsselector nvarchar(12) = null -- only exists for CDL reasons
+    ,@transactiontypesselector nvarchar(12) = null -- only exists for CDL reasons  
+)
+as
+	set nocount on;
+
+	select 
+		   @APPLICATIONS,
+		   @TRANSACTIONTYPES
+
+			]]>
+		</c:CreateProcedureSQL>
+	</SPDataList>
+	 
+	<Parameters>
+		<FormMetaData xmlns="bb_appfx_commontypes">
+			<FormFields>
+        <FormField FieldID="transactiontypes" Caption="Transaction types" DataType="String" AvailableToClient="false" />
+        <FormField FieldID="transactiontypesselector" Caption="Transaction types" DefaultValueText="0" Required="true" >
+          <ValueList>
+            <Items>
+              <Item>
+                <Value>0</Value>
+                <Label>All transaction types</Label>
+              </Item>
+              <Item>
+                <Value>1</Value>
+                <Label>Selected transaction types</Label>
+              </Item>
+            </Items>
+          </ValueList>
+        </FormField>
+        <FormField FieldID="applications" Caption="Applications" DataType="String" AvailableToClient="false" />
+        <FormField FieldID="applicationsselector" Caption="Applications" DataType="String" DefaultValueText="0" Required="true">
+          <ValueList>
+            <Items>
+              <Item>
+                <Value>0</Value>
+                <Label>All applications</Label>
+              </Item>
+              <Item>
+                <Value>1</Value>
+                <Label>Selected applications</Label>
+              </Item>
+            </Items>
+          </ValueList>
+        </FormField>
+			</FormFields>
+        <WebUIComponent>
+            <UIModel AssemblyName="ReportingMultiSelect.UIModel.dll" ClassName="ReportingMultiSelect.UIModel.ExampleDataListUIModel" />
+            <WebUI>
+              <ExternalResource Url="browser/htmlforms/custom/reportingmultiselect/ExampleDataList.html" />
+            </WebUI>
+        </WebUIComponent>
+      <UIActions>
+        <UIAction ActionID="ShowTransactionTypesForm" ImageKey="res:editsmall" AvailableToClient="false">
+          <ShowCustomForm LinkedFieldId="transactiontypes">
+            <ModelComponent AssemblyName="ReportingMultiSelect.UIModel.dll" ClassName="ReportingMultiSelect.UIModel.MultiSelectTransactionTypesUIModel" />
+          </ShowCustomForm>
+        </UIAction>
+        <UIAction ActionID="ShowApplicationsForm" ImageKey="res:editsmall" AvailableToClient="false">
+          <ShowCustomForm LinkedFieldId="applications">
+            <ModelComponent AssemblyName="ReportingMultiSelect.UIModel.dll" ClassName="ReportingMultiSelect.UIModel.MultiSelectApplicationsUIModel" />
+          </ShowCustomForm>
+        </UIAction>
+      </UIActions>
+		</FormMetaData>
+	</Parameters>
+
+	<!-- define the output fields in the list -->
+	<Output>
+		<OutputFields>
+			<OutputField FieldID="APPLICATIONS" Caption="Applications" DataType="String" />
+			<OutputField FieldID="TRANSACTIONTYPES" Caption="Transctions" DataType="String" />
+		</OutputFields>
+	</Output>
+
+</DataListSpec>

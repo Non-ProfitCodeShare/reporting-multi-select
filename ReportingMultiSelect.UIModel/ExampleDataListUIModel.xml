@@ -1,0 +1,10 @@
+﻿<UIModelWizardMetadata>
+  <SpecFileName>Example.DataList.xml</SpecFileName>
+  <Namespace></Namespace>
+  <ClassName>ExampleDataListUIModel</ClassName>
+  <HtmlInfo GenerateHtml="true">
+    <HtmlFile>ExampleDataList.html</HtmlFile>
+    <HtmlFolder>C:\projects\MultiSelect\ReportingMultiSelect.UIModel\htmlforms\custom\reportingmultiselect</HtmlFolder>
+  </HtmlInfo>
+  <GenerateFromDatabase>false</GenerateFromDatabase>
+</UIModelWizardMetadata>

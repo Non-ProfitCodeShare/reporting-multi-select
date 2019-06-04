@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReportingMultiSelect.UIModel", "ReportingMultiSelect.UIModel\ReportingMultiSelect.UIModel.csproj", "{2820B209-12AF-4993-8255-EA995F4C851F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReportingMultiSelect.Catalog", "ReportingMultiSelect.Catalog\ReportingMultiSelect.Catalog.csproj", "{BB06B2D7-3828-4D9D-92FF-9521F8C956EF}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://blackbaud-customers.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ReportingMultiSelect.UIModel\\ReportingMultiSelect.UIModel.csproj
+		SccProjectName1 = ReportingMultiSelect.UIModel
+		SccLocalPath1 = ReportingMultiSelect.UIModel
+		SccProjectUniqueName2 = ReportingMultiSelect.Catalog\\ReportingMultiSelect.Catalog.csproj
+		SccProjectName2 = ReportingMultiSelect.Catalog
+		SccLocalPath2 = ReportingMultiSelect.Catalog
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2820B209-12AF-4993-8255-EA995F4C851F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2820B209-12AF-4993-8255-EA995F4C851F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2820B209-12AF-4993-8255-EA995F4C851F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2820B209-12AF-4993-8255-EA995F4C851F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB06B2D7-3828-4D9D-92FF-9521F8C956EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB06B2D7-3828-4D9D-92FF-9521F8C956EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB06B2D7-3828-4D9D-92FF-9521F8C956EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB06B2D7-3828-4D9D-92FF-9521F8C956EF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

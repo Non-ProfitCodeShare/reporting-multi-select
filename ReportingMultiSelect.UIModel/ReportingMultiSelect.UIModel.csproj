@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2820B209-12AF-4993-8255-EA995F4C851F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ReportingMultiSelect.UIModel</RootNamespace>
+    <AssemblyName>ReportingMultiSelect.UIModel</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Deploy\vroot\bin\custom\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>C:\CRM\CRM_MSKCC_4_0\Web\bbappfx\vroot\bin\custom</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Blackbaud.AppFx, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Blackbaud.AppFx.Server, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Blackbaud.AppFx.UIModeling.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Blackbaud.AppFx.XmlTypes, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Blackbaud.AppFx.XmlTypes.XmlSerializers, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ExampleDataListUIModel.CodeGen.cs">
+      <DependentUpon>ExampleDataListUIModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExampleDataListUIModel.cs" />
+    <Compile Include="MultiSelectApplicationsUIModel.CodeGen.cs">
+      <DependentUpon>MultiSelectApplicationsUIModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MultiSelectApplicationsUIModel.cs" />
+    <Compile Include="MultiSelectFunctions.cs" />
+    <Compile Include="MultiSelectTransactionTypesUIModel.CodeGen.cs">
+      <DependentUpon>MultiSelectTransactionTypesUIModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MultiSelectTransactionTypesUIModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="..\ReportingMultiSelect.Catalog\Example\Example.DataList.xml">
+      <Link>LinkedSpecs\Example.DataList.xml</Link>
+    </None>
+    <Content Include="ExampleDataListUIModel.xml">
+      <DependentUpon>ExampleDataListUIModel.cs</DependentUpon>
+    </Content>
+    <Content Include="htmlforms\custom\reportingmultiselect\ExampleDataList.js" />
+    <Content Include="htmlforms\custom\reportingmultiselect\ExampleDataList.html" />
+    <None Include="..\ReportingMultiSelect.Catalog\CustomUI\MultiSelectApplications.Custom.xml">
+      <Link>LinkedSpecs\MultiSelectApplications.Custom.xml</Link>
+    </None>
+    <Content Include="htmlforms\custom\reportingmultiselect\MultiSelectApplications.html" />
+    <Content Include="MultiSelectApplicationsUIModel.xml">
+      <DependentUpon>MultiSelectApplicationsUIModel.cs</DependentUpon>
+    </Content>
+    <None Include="..\ReportingMultiSelect.Catalog\CustomUI\MultiSelectTransactionTypes.Custom.xml">
+      <Link>LinkedSpecs\MultiSelectTransactionTypes.Custom.xml</Link>
+    </None>
+    <Content Include="htmlforms\custom\reportingmultiselect\MultiSelectTransactionTypes.html" />
+    <Content Include="MultiSelectTransactionTypesUIModel.xml">
+      <DependentUpon>MultiSelectTransactionTypesUIModel.cs</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>"$(ProjectDir)postbuild.bat"</PostBuildEvent>
+  </PropertyGroup>
+</Project>

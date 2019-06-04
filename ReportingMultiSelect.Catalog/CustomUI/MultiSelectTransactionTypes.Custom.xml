@@ -1,0 +1,30 @@
+﻿<CustomUIModelMetadata
+	xmlns="bb_appfx_customuimodelmetadata"
+	xmlns:c="bb_appfx_commontypes" 
+	ID="fbe3a8ac-773b-4eb6-a6cb-c9960366f683" 
+	Name="Multi Select Transaction Types"
+	Description="Multi-select transaction types form" 
+	Author="MSKCC"
+	FormHeader="Select transaction types"
+	>
+
+	<FormMetaData xmlns="bb_appfx_commontypes">
+		<FormFields>
+			<FormField FieldID="Payment" Caption="Payment" DataType="Boolean"  />
+			<FormField FieldID="Pledge" Caption="Pledge" DataType="Boolean" />
+			<FormField FieldID="RecurringGift" Caption="Recurring Gift" DataType="Boolean"/>
+      <FormField FieldID="MatchingGift" Caption="Matching Gift" DataType="Boolean" />
+		</FormFields>
+        <WebUIComponent>
+            <UIModel AssemblyName="ReportingMultiSelect.UIModel.dll" ClassName="ReportingMultiSelect.UIModel.MultiSelectTransactionTypesUIModel" />
+            <WebUI>
+                <ExternalResource Url="browser/htmlforms/custom/reportingmultiselect/MultiSelectTransactionTypes.html" />
+            </WebUI>
+        </WebUIComponent>
+    <UIActions>
+      <UIAction ActionID="SelectAll" Caption="Select all" />
+      <UIAction ActionID="UnselectAll" Caption="Unselect all" />
+    </UIActions>
+	</FormMetaData>
+
+</CustomUIModelMetadata>

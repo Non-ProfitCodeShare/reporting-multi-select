@@ -1,0 +1,10 @@
+﻿<UIModelWizardMetadata>
+  <SpecFileName>MultiSelectTransactionTypes.Custom.xml</SpecFileName>
+  <Namespace></Namespace>
+  <ClassName>MultiSelectTransactionTypesUIModel</ClassName>
+  <HtmlInfo GenerateHtml="true">
+    <HtmlFile>MultiSelectTransactionTypes.html</HtmlFile>
+    <HtmlFolder>htmlforms\custom\reportingmultiselect\</HtmlFolder>
+  </HtmlInfo>
+  <GenerateFromDatabase>false</GenerateFromDatabase>
+</UIModelWizardMetadata>
